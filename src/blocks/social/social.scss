@@ -1,0 +1,64 @@
+// В этом файле должны быть стили для БЭМ-блока social, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.social {
+
+  $block-name:                &; // #{$block-name}__element
+
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  text-align: left;
+
+  &__item {
+    display: inline-block;
+    margin: 0 4px;
+  }
+  &__link {
+
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--vk {
+      &:before {
+        @include sprite($social-icon-vk);
+      }
+    }
+    &--telegram {
+      &:before {
+        @include sprite($social-icon-telegram);
+      }
+    }
+    &--fb {
+      &:before {
+        @include sprite($social-icon-fb);
+      }
+    }
+    &--inst {
+      &:before {
+        @include sprite($social-icon-inst);
+      }
+    }
+    &--whatsapp {
+      &:before {
+        @include sprite($social-icon-whatsapp);
+      }
+    }
+    &--viber {
+      &:before {
+        @include sprite($social-icon-viber);
+      }
+    }
+  }
+}

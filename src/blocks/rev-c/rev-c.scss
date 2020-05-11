@@ -1,0 +1,68 @@
+// В этом файле должны быть стили для БЭМ-блока rev-c, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.rev-c {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrap {
+    max-width: 860px;
+    margin: auto;
+  }
+
+  &__card {
+    background: #FCFCFC;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 15px 40px;
+  }
+
+  &__card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  &__card-user {
+    font-weight: 500;
+  }
+  &__card-var {
+    a {
+      color: #67B467;
+    }
+  }
+  &__card-body {
+    font-size: 18px;
+
+    h6 {
+      color: #67B467;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+  &__card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    @media (max-width: ($screen-md - 1)) {
+      .btn {
+        flex-basis: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+}

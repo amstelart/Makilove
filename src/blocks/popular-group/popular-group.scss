@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока popular-group, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.popular-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+
+  &__col {
+    @include col();
+    @include col(md, 3);
+    @include col(sm, 6);
+  }
+}

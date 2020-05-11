@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока product-catalog, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product-catalog {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    @include row;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    @include col();
+    @include col(lg, 3);
+    @include col(md, 4);
+    @include col(sm, 6);
+    @include col(xs, 12);
+    margin-bottom: 20px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__more {
+    text-align: center;
+  }
+}

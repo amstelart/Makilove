@@ -1,0 +1,67 @@
+// В этом файле должны быть стили для БЭМ-блока user-opt, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-opt {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__btn {
+    padding: 5px;
+    display: inline-block;
+    color: $text-color;
+    text-decoration: none;
+
+    & + & {
+      margin-left: 8px;
+    }
+  }
+  
+  &__icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before {
+      content: "";
+      @include sprite($social-icon-vk);
+    }
+
+    &.icon-bonuses {
+      &:before {
+        @include sprite($icon-bonuses);
+      }
+    }
+    &.icon-favorites {
+      &:before {
+        @include sprite($icon-favorites);
+      }
+    }
+    &.icon-basket {
+      &:before {
+        @include sprite($icon-basket);
+      }
+    }
+  }
+
+  &__label {
+    color: #fff;
+    background-color: $green;
+    border-radius: 15px;
+    min-width: 18px;
+    display: block;
+    position: absolute;
+    padding: 0 3px;
+    top: -5px;
+    right: -5px;
+    text-align: center;
+    font-style: normal;
+  }
+
+  &__caption {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}

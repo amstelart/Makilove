@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока checkout, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.checkout {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__total-amount {
+    margin-right: 35px;
+    font-size: 22px;
+
+    .price-amount {
+      font-weight: 500;
+    }
+  }
+}
