@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Makilove</title>
+  <title>Страница раздела</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -710,20 +710,208 @@
       </header>
 
 
-      <main class="" role="main">
+      <div class="adv-section">
         <div class="container">
-          <ul class="page-list" style="margin: 40px 0 25px 0;">
-            <li><a href="main.html">Главная</a></li>
-            <li><a href="page-category.html">Страница раздела</a></li>
-            <li><a href="page-search.html">Страница поиска</a></li>
-            <li><a href="page-product.html">Страница товара</a></li>
-            <li><a href="page-articles.html">Страница статей</a></li>
-            <li><a href="page-basket--step-1.html">Корзина</a></li>
-            <li><a href="page-basket--step-2.html">Оформление заказа</a></li>
-            <li><a href="page-basket--step-3.html">Оплата</a></li>
-            <li><a href="page-delivery.html">Наши доставки</a></li>
+          <div class="adv-box adv-box--top">
+            <div class="adv-box__item">
+              <i class="adv-box__icon"><svg width="40" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#adv-icon-01"></use></svg></i>
+              <div class="adv-box__caption">Бесплатная доставка</div>
+            </div>
+            <div class="adv-box__item">
+              <i class="adv-box__icon"><svg width="40" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#adv-icon-02"></use></svg></i>
+              <div class="adv-box__caption">Открытка и комплект по уходу</div>
+            </div>
+            <div class="adv-box__item">
+              <i class="adv-box__icon"><svg width="40" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#adv-icon-03"></use></svg></i>
+              <div class="adv-box__caption">Гарантия качества</div>
+            </div>
+            <div class="adv-box__item">
+              <i class="adv-box__icon"><svg width="40" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#adv-icon-04"></use></svg></i>
+              <div class="adv-box__caption">Оплата без комиссии</div>
+            </div>
+            <div class="adv-box__item">
+              <i class="adv-box__icon"><svg width="40" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#adv-icon-05"></use></svg></i>
+              <div class="adv-box__caption">Фото перевод доставкой</div>
+            </div>
+            <div class="adv-box__item">
+              <i class="adv-box__icon"><svg width="40" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#adv-icon-06"></use></svg></i>
+              <div class="adv-box__caption">Доставка за 1 час</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__top">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Интернет магазин MAKILOVE</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Букеты цветов</a></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__link">Розы 50см</span></li>
           </ul>
         </div>
+      </div>
+
+      <main class="" role="main">
+
+        <div class="basket">
+          <div class="container">
+            <div class="basket__steps-nav">
+              <ul class="basket__steps-list">
+                <li><a href="#">1. Ваша корзина</a></li>
+                <li><a href="#">2. Оформление заказа</a></li>
+                <li class="is-active"><a href="#">3. Оплата</a></li>
+              </ul>
+            </div>
+            <div class="basket__steps-content">
+              <div class="tabs">
+                <ul class="tabs__links" role="tablist">
+                  <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                    <a href="#demo-tab-01" class="tabs__link" data-toggle="tab" role="tab">Банковские карты</a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <span data-target="#demo-tab-02" class="tabs__link" data-toggle="tab" role="tab">Электронные деньги</span>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <span data-target="#demo-tab-03" class="tabs__link" data-toggle="tab" role="tab">Наличные</span>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <span data-target="#demo-tab-04" class="tabs__link" data-toggle="tab" role="tab">Юридические лица</span>
+                  </li>
+                </ul>
+                <div class="tabs__content-wrapper">
+                  <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
+                    <div class="payment-method">
+                      <div class="payment-method__item">
+                        <div class="payment-method__card is-active">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-01"></use></svg>
+                          <span>Оплата картами Российских банков</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-02"></use></svg>
+                          <span>Оплата картами VISA/MasterCard</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-03"></use></svg>
+                          <span>Оплата картами со всего мира</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-04"></use></svg>
+                          <span>PayPal</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-method__caption">
+                      <h2>Оплата картами Российских банков</h2>
+                      <p>Удобный способ оплаты для владельцев платежных карт: VISA, Mastercard, МИР. Оплата производится без комиссии.</p>
+                    </div>
+                  </div>
+                  <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
+                    <div class="payment-method">
+                      <div class="payment-method__item">
+                        <div class="payment-method__card is-active">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-01"></use></svg>
+                          <span>Оплата картами Российских банков</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-02"></use></svg>
+                          <span>Оплата картами VISA/MasterCard</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-03"></use></svg>
+                          <span>Оплата картами со всего мира</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-04"></use></svg>
+                          <span>PayPal</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-method__caption">
+                      <h2>Оплата картами Российских банков</h2>
+                      <p>Удобный способ оплаты для владельцев платежных карт: VISA, Mastercard, МИР. Оплата производится без комиссии.</p>
+                    </div>
+                  </div>
+                  <div class="tabs__content-item" id="demo-tab-03" role="tabpanel">
+                    <div class="payment-method">
+                      <div class="payment-method__item">
+                        <div class="payment-method__card is-active">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-01"></use></svg>
+                          <span>Оплата картами Российских банков</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-02"></use></svg>
+                          <span>Оплата картами VISA/MasterCard</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-03"></use></svg>
+                          <span>Оплата картами со всего мира</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-04"></use></svg>
+                          <span>PayPal</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-method__caption">
+                      <h2>Оплата картами Российских банков</h2>
+                      <p>Удобный способ оплаты для владельцев платежных карт: VISA, Mastercard, МИР. Оплата производится без комиссии.</p>
+                    </div>
+                  </div>
+                  <div class="tabs__content-item" id="demo-tab-04" role="tabpanel">
+                    <div class="payment-method">
+                      <div class="payment-method__item">
+                        <div class="payment-method__card is-active">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-01"></use></svg>
+                          <span>Оплата картами Российских банков</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-02"></use></svg>
+                          <span>Оплата картами VISA/MasterCard</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-03"></use></svg>
+                          <span>Оплата картами со всего мира</span>
+                        </div>
+                      </div>
+                      <div class="payment-method__item">
+                        <div class="payment-method__card">
+                          <svg width="100" height="100"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#payment-logo-04"></use></svg>
+                          <span>PayPal</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-method__caption">
+                      <h2>Оплата картами Российских банков</h2>
+                      <p>Удобный способ оплаты для владельцев платежных карт: VISA, Mastercard, МИР. Оплата производится без комиссии.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </main>
 
     </div>
