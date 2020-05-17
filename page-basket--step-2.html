@@ -762,21 +762,23 @@
               </ul>
             </div>
             <div class="basket__steps-content">
-              <form action="" class="basket__details">
+              <form action="" class="basket__details basket-form">
                 <div class="basket__details-col">
                   <div class="field-radio">
                     <div class="field-radio__title">Кому доставить букет?</div>
-                    <div class="field-radio__input-wrap">
-                      <label class="field-radio__name">
-                        <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
-                        <span class="field-radio__name-text">Получателю</span>
-                      </label>
-                    </div>
-                    <div class="field-radio__input-wrap">
-                      <label class="field-radio__name">
-                        <input class="field-radio__input" type="radio" id="" name="demo-radio">
-                        <span class="field-radio__name-text">Мне</span>
-                      </label>
+                    <div class="field-radio__inline">
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id="" name="demo-radio" checked>
+                          <span class="field-radio__name-text">Получателю</span>
+                        </label>
+                      </div>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                          <span class="field-radio__name-text">Мне</span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <label class="field-text">
@@ -784,17 +786,20 @@
                       <input class="field-text__input" type="text" placeholder="Имя получателя" id="" name="">
                     </span>
                   </label>
-                  <label class="field-text">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" placeholder="Телефон получателя" id="" name="">
-                    </span>
-                  </label>
+                  <div class="field-phone">
+                    <label class="field-text">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Телефон получателя" id="">
+                        <span class="field-text__help-text">Помощь</span>
+                      </span>
+                    </label>
+                  </div>
                   <div class="field-checkbox">
                     <label class="field-checkbox__name">
                       <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
                       <span class="field-checkbox__name-text">Доставить без звонка получателю</span>
                     </label>
-                  </div>
+                  </div> 
                   <label class="field-text">
                     <span class="field-text__input-wrap">
                       <input class="field-text__input" type="text" placeholder="Адрес доставки" id="" name="">
@@ -806,11 +811,17 @@
                       <span class="field-checkbox__name-text">Не знаю адрес получателя, знаю только телефон</span>
                     </label>
                   </div>
+                  <div>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5be03193dba9f0c550f29542f8b955c9da047ba2b535a26b12bdeac918ba2cff&amp;width=100%25&amp;height=315&amp;lang=ru_RU&amp;scroll=false"></script>
+                  </div>
                 </div>
                 <div class="basket__details-col">
-                  <label class="field-text">
+                  <label class="field-text field-text--date">
                     <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" placeholder="Пятница, 24 января" id="" name="">
+                      <input class="field-text__input" type="text" data-toggle="datepicker" placeholder="Пятница, 24 января" id="" name="">
+                      <div class="field-text__icon">
+                        <svg width="22" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#input-date-icon"></use></svg>
+                      </div>
                     </span>
                   </label>
                   <label class="field-text">
@@ -825,7 +836,7 @@
                   </label>
                   <label class="field-text">
                     <span class="field-text__input-wrap">
-                      <textarea class="field-text__input" placeholder="textarea"></textarea>
+                      <textarea class="field-text__input" placeholder="Комментарий" rows="6"></textarea>
                     </span>
                   </label>
                   <div class="field-checkbox">
@@ -847,7 +858,13 @@
                     </label>
                   </div>
                   <div>
-                    <a href="#" class="btn btn--green">Перейти к оплате</a>
+                    <div class="basket-form__price">
+                      <div class="basket-form__price-item">Доставка: <span>0р.</span></div>
+                      <div class="basket-form__price-item">Товары: <span>1000р.</span></div>
+                    </div>
+                    <div class="field-actions">
+                      <button class="btn btn--block btn--green">Перейти к оплате</button>
+                    </div>
                     <div class="field-checkbox">
                       <label class="field-checkbox__name">
                         <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
