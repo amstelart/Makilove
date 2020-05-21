@@ -770,6 +770,73 @@
               <li><a href="#">Заказы</a></li>
             </ul>
           </div>
+          <div class="account__filter">
+            <div class="account__filter-tags">
+              <div class="tags-filter">
+                <a href="#" class="tags-filter__item active">Активные заказы</a>
+                <a href="#" class="tags-filter__item all">Все заказы (100)</a>
+                <a href="#" class="tags-filter__item completed">Выполненные заказы</a>
+                <a href="#" class="tags-filter__item orders-for-march">Заказы на 8 марта</a>
+                <a href="#" class="tags-filter__item orders-for-february">Заказы на 14 февраля</a>
+              </div>
+            </div>
+            <div class="account__filter-row">
+              <div class="account__filter-group">
+                <div class="filter__order-num">
+                  <span># заказа</span>
+                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                </div>
+                <div class="filter__order-date">
+                  <span>Дата заказа С</span>
+                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                  <span>по</span>
+                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                </div>
+              </div>
+            </div>
+            <div class="account__filter-row">
+              <div class="field-checkbox">
+                <div class="field-checkbox__inline">
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                      <span class="field-checkbox__name-text">Ожидает</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="">
+                      <span class="field-checkbox__name-text">На утверждении</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                      <span class="field-checkbox__name-text">Выполнен</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="">
+                      <span class="field-checkbox__name-text">Готов к отправке</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                      <span class="field-checkbox__name-text">Доставлен</span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox__input-wrap">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="">
+                      <span class="field-checkbox__name-text">На сборке</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="account__content">
             <div class="user-orders">
               <div class="table-mobile-scroll">
@@ -780,26 +847,103 @@
                       <th>Дата заказа</th>
                       <th>Состав заказа</th>
                       <th>Доставка</th>
-                      <th>Способ оплаты</th>
                       <th>Состояние заказа</th>
                     </tr>
                   </thead>
                   <tbody class="table__body">
                     <tr>
-                      <td>3692</td>
+                      <td>
+                        3692
+                        <div class="table__btn-group">
+                          <a href="#" class="btn btn--table-blue">Открыть заказ</a>
+                          <a href="#" class="btn btn--table-green">Бланк заказа</a>
+                        </div>
+                      </td>
                       <td>08.03.2020</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td><span class="btn btn--green">Оплата банковской картой</span></td>
-                      <td><span class="btn btn--pink">Заказ принят, ожидается оплата</span></td>
+                      <td>
+                        <div class="table__order-list">
+                          <div class="table__order-list-head">
+                            <div class="table__order-list-title">Роскошь и благородство</div>
+                            <div class="table__order-list-qut">1 шт.</div>
+                            <div class="table__order-list-price">1970 р.</div>
+                          </div>
+                          <div class="table__order-list-caption">
+                            Название варианта товара
+                          </div>
+                        </div>
+                        <div class="table__order-list">
+                          <div class="table__order-list-head">
+                            <div class="table__order-list-title">Открытка</div>
+                            <div class="table__order-list-qut">1 шт.</div>
+                            <div class="table__order-list-price">0 р.</div>
+                          </div>
+                          <div class="table__order-list-caption box">
+                            Любой букет или композицию с нашего сайта мы доставим бесплатно. Бесплатная доставка осуществляется ежедневно с 9-20 по г. Челябинску
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table__delivery">
+                          <div class="table__delivery-item"><span>Город:</span>Челябинск</div>
+                          <div class="table__delivery-item"><span>Адрес:</span>ул. Университетская набережная д.14, кв.12</div>
+                          <div class="table__delivery-item"><span>Дата:</span>08.03.2020 14-00:16-00</div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="label label--pink">На подтверждении у партнера</span>
+                        <div class="table__btn-group btn-group-inline">
+                          <a href="#" class="btn btn--table-green">Принять</a>
+                          <a href="#" class="btn btn--table-pink">Отклонить</a>
+                          <a href="#" class="btn btn--table-blue">Загрузить фото</a>
+                        </div>
+                      </td>
                     </tr>
                     <tr>
-                      <td>3692</td>
+                      <td>
+                        3692
+                        <div class="table__btn-group">
+                          <a href="#" class="btn btn--table-blue">Открыть заказ</a>
+                          <a href="#" class="btn btn--table-green">Бланк заказа</a>
+                        </div>
+                      </td>
                       <td>08.03.2020</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td><span class="btn btn--green">Оплата банковской картой</span></td>
-                      <td><span class="btn btn--pink">Заказ принят, ожидается оплата</span></td>
+                      <td>
+                        <div class="table__order-list">
+                          <div class="table__order-list-head">
+                            <div class="table__order-list-title">Роскошь и благородство</div>
+                            <div class="table__order-list-qut">1 шт.</div>
+                            <div class="table__order-list-price">1970 р.</div>
+                          </div>
+                          <div class="table__order-list-caption">
+                            Название варианта товара
+                          </div>
+                        </div>
+                        <div class="table__order-list">
+                          <div class="table__order-list-head">
+                            <div class="table__order-list-title">Открытка</div>
+                            <div class="table__order-list-qut">1 шт.</div>
+                            <div class="table__order-list-price">0 р.</div>
+                          </div>
+                          <div class="table__order-list-caption box">
+                            Любой букет или композицию с нашего сайта мы доставим бесплатно. Бесплатная доставка осуществляется ежедневно с 9-20 по г. Челябинску
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="table__delivery">
+                          <div class="table__delivery-item"><span>Город:</span>Челябинск</div>
+                          <div class="table__delivery-item"><span>Адрес:</span>ул. Университетская набережная д.14, кв.12</div>
+                          <div class="table__delivery-item"><span>Дата:</span>08.03.2020 14-00:16-00</div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="label label--pink">На подтверждении у партнера</span>
+                        <div class="table__btn-group btn-group-inline">
+                          <a href="#" class="btn btn--table-green">Принять</a>
+                          <a href="#" class="btn btn--table-pink">Отклонить</a>
+                          <a href="#" class="btn btn--table-blue">Загрузить фото</a>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
