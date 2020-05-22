@@ -771,48 +771,105 @@
             </ul>
           </div>
           <div class="account__content">
-            <div class="user-orders">
-              <div class="table-mobile-scroll">
-                <table class="table">
-                  <thead class="table__header">
-                    <tr>
-                      <th>№ заказа</th>
-                      <th>Дата заказа</th>
-                      <th>Состав заказа</th>
-                      <th>Доставка</th>
-                      <th>Способ оплаты</th>
-                      <th>Состояние заказа</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table__body">
-                    <tr>
-                      <td>3692</td>
-                      <td>08.03.2020</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td><span class="btn btn--green">Оплата банковской картой</span></td>
-                      <td><span class="btn btn--pink">Заказ принят, ожидается оплата</span></td>
-                    </tr>
-                    <tr>
-                      <td>3692</td>
-                      <td>08.03.2020</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate!</td>
-                      <td><span class="btn btn--green">Оплата банковской картой</span></td>
-                      <td><span class="btn btn--pink">Заказ принят, ожидается оплата</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="partner-order">
+              <div class="partner-order__head">
+                <div class="partner-order__num">Заказ №1234</div>
+                <span class="label label--pink">На подтверждении у партнера</span>
               </div>
-            </div>
-          </div>
-          <div class="account__pagination">
-            <div class="pagination">
-              <span class="pagination__item  pagination__item--active">1</span>
-              <a href="" class="pagination__item">2</a>
-              <a href="" class="pagination__item">3</a>
-              <a href="" class="pagination__item">4</a>
-              <a href="" class="pagination__item">5</a>
+              <div class="table__btn-group btn-group-inline">
+                <a href="#" class="btn btn--table-green">Бланк заказа</a>
+                <a href="#" class="btn btn--table-green">Принять</a>
+                <a href="#" class="btn btn--table-pink">Отклонить</a>
+              </div>
+              <div class="partner-order__row">
+                <div class="partner-order__col">
+                  <div class="partner-order__box">
+                    <div class="partner-order__box-title">Информация о заказе</div>
+                    <ul class="partner-order__info">
+                      <li><span>Получатель:</span>Александр</li>
+                      <li><span>Телефон получателя:</span>8(999) 123-45-67</li>
+                      <li><span>Адрес доставки:</span>г.Челябинск ул.Братьев Кашириных д.123, кв.11</li>
+                      <li><span>Дата доставки:</span>10.02.2020 в 16:00-18:00</li>
+                    </ul>
+                  </div>
+                  <div class="partner-order__box">
+                    <div class="partner-order__box-title">Стоимость заказа</div>
+                    <ul class="partner-order__cost">
+                      <li>Стоимость доставки: <span>300 р.</span></li>
+                      <li>Стоимость товаров: <span>1170 р.</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="partner-order__col">
+                  <div class="partner-order__box">
+                    <div class="partner-order__box-title">Состав заказа</div>
+                    <div class="partner-order__card">
+                      <div class="partner-order__card-part img">
+                        <img src="img/partner-order-img.jpg" alt="">
+                      </div>
+                      <div class="partner-order__card-part inf">
+                        <div>Название товара</div>
+                        <div>Название варианта товара</div>
+                      </div>
+                      <div class="partner-order__card-part">
+                        <span>1 шт.</span>
+                      </div>
+                      <div class="partner-order__card-part">
+                        <span>1170 р.</span>
+                      </div>
+                    </div>
+                    <div class="partner-order__card">
+                      <div class="partner-order__card-part img">
+                        <img src="img/partner-order-img.jpg" alt="">
+                      </div>
+                      <div class="partner-order__card-part inf">
+                        <div>Название товара</div>
+                        <div>Название варианта товара</div>
+                      </div>
+                      <div class="partner-order__card-part">
+                        <span>1 шт.</span>
+                      </div>
+                      <div class="partner-order__card-part">
+                        <span>1170 р.</span>
+                      </div>
+                    </div>
+                    <div class="partner-order__card">
+                      <div class="partner-order__card-part img">
+                        <img src="img/partner-order-img.jpg" alt="">
+                      </div>
+                      <div class="partner-order__card-part inf">
+                        <div>Название товара</div>
+                        <div>Название варианта товара</div>
+                      </div>
+                      <div class="partner-order__card-part">
+                        <span>1 шт.</span>
+                      </div>
+                      <div class="partner-order__card-part">
+                        <span>1170 р.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form action="" class="partner-order__form">
+                <div class="field-file">
+                  <div class="field-file__name">Фотография до отправки</div>
+                  <label class="field-file__input-wrap">
+                    <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}" id="" name="" multiple>
+                    <div class="field-file__name-text" data-button-text="Выбрать файл(ы)">Ничего не выбрано</div>
+                  </label>
+                </div>
+                <div class="field-file">
+                  <div class="field-file__name">Фотография вручения</div>
+                  <label class="field-file__input-wrap">
+                    <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}" id="" name="" multiple>
+                    <div class="field-file__name-text" data-button-text="Выбрать файл(ы)">Ничего не выбрано</div>
+                  </label>
+                </div>
+                <div class="field-actions">
+                  <button class="btn btn--green">Отправить</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
