@@ -65,7 +65,7 @@
                 <div class="top-header__phone-num">+7(351) 700-800-6</div>
                 <div class="top-header__phone-text">Прием заказов на сайте круглосуточно</div>
               </div>
-              <a href="#" class="btn btn--callback">Заказать звонок</a>
+              <a href="#modal-call" class="btn btn--callback"  data-toggle="modal">Заказать звонок</a>
             </div>
             <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
             <div class="top-header__r">
@@ -935,6 +935,195 @@
         </div>
       </footer>
 
+
+      <!-- modals -->
+
+      <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <img class="modal__logo" src="img/modal-logo.png" alt="">
+              <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
+            </div>
+            <div class="modal__body">
+              <form action="">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--rounded-pink">Отправить</button>
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                      <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-city" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <img class="modal__logo" src="img/modal-logo.png" alt="">
+              <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
+            </div>
+            <div class="modal__body">
+              <form action="">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--rounded-pink">Отправить</button>
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                      <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-added" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <img class="modal__logo" src="img/modal-logo.png" alt="">
+            </div>
+            <div class="modal__body">
+              <h4>Товар добавлен в корзину</h4>
+              <div class="modal__footer">
+                <a href="#" class="btn btn--rounded-outline-green">Перейти в корзину</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-postal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <img class="modal__logo" src="img/modal-logo.png" alt="">
+              <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
+            </div>
+            <div class="modal__body">
+              <form action="">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--rounded-pink">Отправить</button>
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                      <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-password" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <img class="modal__logo" src="img/modal-logo.png" alt="">
+            </div>
+            <div class="modal__body">
+              <form action="">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="password" placeholder="Введите новый пароль" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="password" placeholder="Повторите пароль" id="" name="">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--rounded-outline-green">Сохранить</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal__footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal-review" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <img class="modal__logo" src="img/modal-logo.png" alt="">
+              <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
+            </div>
+            <div class="modal__body">
+              <form action="">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--rounded-pink">Отправить</button>
+                  <div class="field-checkbox">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                      <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
