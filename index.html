@@ -864,28 +864,31 @@
               <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
             </div>
             <div class="modal__body">
-              <form action="">
-                <label class="field-text">
-                  <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
-                  </span>
-                </label>
-                <label class="field-text">
-                  <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
-                  </span>
-                </label>
-                <div class="field-actions">
-                  <button class="btn btn--rounded-pink">Отправить</button>
+              <div class="modal__call">
+                <form action="">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
+                    </span>
+                  </label>
+                  <div class="field-actions">
+                    <button class="btn btn--rounded-pink">Отправить</button>
+                  </div>
                   <div class="field-checkbox">
                     <label class="field-checkbox__name">
                       <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
                       <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
                     </label>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
+            <div class="modal__footer"></div>
           </div>
         </div>
       </div>
@@ -896,31 +899,62 @@
             <div class="modal__header">
               <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
               <img class="modal__logo" src="img/modal-logo.png" alt="">
-              <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
+              <h4 class="modal__caption">Выберите город доставки</h4>
             </div>
             <div class="modal__body">
+              <div class="modal__city-title">Текущий город:<span>Челябинск</span></div>
               <form action="">
                 <label class="field-text">
                   <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                    <input class="field-text__input" type="text" placeholder="Название города" id="" name="">
                   </span>
                 </label>
-                <label class="field-text">
-                  <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
-                  </span>
-                </label>
-                <div class="field-actions">
-                  <button class="btn btn--rounded-pink">Отправить</button>
-                  <div class="field-checkbox">
-                    <label class="field-checkbox__name">
-                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
-                      <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
-                    </label>
-                  </div>
-                </div>
+                <p class="modal__city-caption">Пожалуйста, выберите город, куда вы хотите доставить букет. От выбранного города будет зависеть цена и ассортимент.</p>
               </form>
+              <div class="modal__city-row">
+                <div class="modal__city-col">
+                  <ul class="modal__city-list">
+                    <li><a href="#">Челябинск</a></li>
+                    <li><a href="#">Екатеринбург</a></li>
+                    <li><a href="#">Тюмень</a></li>
+                    <li><a href="#">Копейск</a></li>
+                    <li><a href="#">Златоуст</a></li>
+                    <li><a href="#">Курган</a></li>
+                  </ul>
+                </div>
+                <div class="modal__city-col">
+                  <ul class="modal__city-list">
+                    <li><a href="#">Челябинск</a></li>
+                    <li><a href="#">Екатеринбург</a></li>
+                    <li><a href="#">Тюмень</a></li>
+                    <li><a href="#">Копейск</a></li>
+                    <li><a href="#">Златоуст</a></li>
+                    <li><a href="#">Курган</a></li>
+                  </ul>
+                </div>
+                <div class="modal__city-col">
+                  <ul class="modal__city-list">
+                    <li><a href="#">Челябинск</a></li>
+                    <li><a href="#">Екатеринбург</a></li>
+                    <li><a href="#">Тюмень</a></li>
+                    <li><a href="#">Копейск</a></li>
+                    <li><a href="#">Златоуст</a></li>
+                    <li><a href="#">Курган</a></li>
+                  </ul>
+                </div>
+                <div class="modal__city-col">
+                  <ul class="modal__city-list">
+                    <li><a href="#">Челябинск</a></li>
+                    <li><a href="#">Екатеринбург</a></li>
+                    <li><a href="#">Тюмень</a></li>
+                    <li><a href="#">Копейск</a></li>
+                    <li><a href="#">Златоуст</a></li>
+                    <li><a href="#">Курган</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
+            <div class="modal__footer"></div>
           </div>
         </div>
       </div>
@@ -933,9 +967,11 @@
               <img class="modal__logo" src="img/modal-logo.png" alt="">
             </div>
             <div class="modal__body">
-              <h4>Товар добавлен в корзину</h4>
-              <div class="modal__footer">
-                <a href="#" class="btn btn--rounded-outline-green">Перейти в корзину</a>
+              <div class="modal__added">
+                <h4>Товар добавлен в корзину</h4>
+                <div class="modal__footer">
+                  <a href="#" class="btn btn--rounded-outline-green">Перейти в корзину</a>
+                </div>
               </div>
             </div>
           </div>
@@ -951,27 +987,7 @@
               <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
             </div>
             <div class="modal__body">
-              <form action="">
-                <label class="field-text">
-                  <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
-                  </span>
-                </label>
-                <label class="field-text">
-                  <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
-                  </span>
-                </label>
-                <div class="field-actions">
-                  <button class="btn btn--rounded-pink">Отправить</button>
-                  <div class="field-checkbox">
-                    <label class="field-checkbox__name">
-                      <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
-                      <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
-                    </label>
-                  </div>
-                </div>
-              </form>
+        
             </div>
           </div>
         </div>
@@ -985,7 +1001,7 @@
               <img class="modal__logo" src="img/modal-logo.png" alt="">
             </div>
             <div class="modal__body">
-              <form action="">
+              <form action="" class="modal__password-form">
                 <label class="field-text">
                   <span class="field-text__input-wrap">
                     <input class="field-text__input" type="password" placeholder="Введите новый пароль" id="" name="">
@@ -1013,34 +1029,48 @@
             <div class="modal__header">
               <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
               <img class="modal__logo" src="img/modal-logo.png" alt="">
-              <h4 class="modal__caption">Укажите номер вашего телефона и мы Вам перезвоним в ближайшее время.</h4>
             </div>
             <div class="modal__body">
-              <form action="">
-                <label class="field-text">
-                  <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
-                  </span>
-                </label>
-                <label class="field-text">
-                  <span class="field-text__input-wrap">
-                    <input class="field-text__input" type="text" placeholder="Ваше телефон" id="" name="">
-                  </span>
-                </label>
-                <div class="field-actions">
-                  <button class="btn btn--rounded-pink">Отправить</button>
+              <div class="modal__review">
+                <form action="" class="modal__review-form">
+                  <div class="field-rating">
+                    <div class="star-rating">
+                      <span style="width:80%"></span>
+                    </div>
+                  </div>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" rows="8" placeholder="Введите свой отзыв"></textarea>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                    </span>
+                  </label>
+                  <div class="field-file">
+                    <label class="field-file__input-wrap">
+                      <input class="field-file__input" type="file" data-multiple-caption="файлов выбрано: {count}" id="" name="" multiple>
+                      <div class="field-file__name-text" data-button-text="Прикрепить фото">Ничего не выбрано</div>
+                    </label>
+                  </div>
                   <div class="field-checkbox">
                     <label class="field-checkbox__name">
                       <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
                       <span class="field-checkbox__name-text">Нажимая на кнопку отправить вы соглашаетесь с условиями обработки персональных данных</span>
                     </label>
                   </div>
-                </div>
-              </form>
+                  <div class="field-actions">
+                    <button class="btn btn--rounded-outline-green">Отправить</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <a href="#" class="to-top" id="toTop">↑</a>
     </div>
 
   </div>
