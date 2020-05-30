@@ -1,0 +1,63 @@
+// В этом файле должны быть стили для БЭМ-блока user-dates, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-dates {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+  margin: auto;
+  
+  @media (min-width: $screen-lg) {
+    max-width: 700px;
+  }
+
+  &__form-wrap {
+    @include col();
+    @include col(md, 5);
+  }
+  &__note-wrap {
+    @include col();
+    @include col(md, 7);
+  }
+
+  &__note {
+    border: 1px solid #C4C4C4;
+    margin-bottom: 5px;
+  }
+  &__note-header {
+    border-bottom: 1px solid #C4C4C4;
+    font-size: 14px;
+    padding: 4px 8px;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+
+    .note-name {
+      margin-right: auto;
+    }
+    .note-date {
+      padding: 0 4px;
+    }
+    .note-edit {
+      padding: 0 4px;
+      a {
+        font-size: 12px;
+        text-decoration: none;
+        color: #67B467;
+      }
+    }
+    .note-delete {
+      padding: 0 4px;
+      a {
+        font-size: 12px;
+        text-decoration: none;
+        color: #F78484;
+      }
+    }
+  }
+  &__note-body {
+    padding: 4px 8px;
+  }
+}

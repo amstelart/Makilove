@@ -46,7 +46,8 @@ $border-radius:               3px !default;
     align-items: baseline;
     width: 100%;
     background-color: #fff;
-    border: 1px solid $border-color;
+    border: 1px solid #E1E1E1;
+    color: #E1E1E1;
     border-radius: $border-radius;
     white-space: nowrap;
     overflow: hidden;
@@ -56,8 +57,9 @@ $border-radius:               3px !default;
     &:before {
       content: attr(data-button-text);
       display: block;
-      background-color: $gray-lightest;
-      border-right: 1px solid $border-color;
+      color: #fff;
+      background-color: $color-main;
+      border-right: 1px solid $color-main;
       margin-right: $field-padding-horizontal;
       line-height: $line-height;
       padding: $field-padding-vertical  $field-padding-horizontal;
@@ -69,7 +71,7 @@ $border-radius:               3px !default;
     &:focus {
 
       &:before {
-        background-color: darken($gray-lightest, 10%); // как у обычных кнопок
+        background-color: darken($color-main, 10%); // как у обычных кнопок
       }
     }
   }

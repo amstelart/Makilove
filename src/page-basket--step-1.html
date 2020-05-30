@@ -79,30 +79,130 @@
             <div class="basket__steps-content">
               <div class="basket__product-group">
                 <div class="basket__product">
-                  <div class="basket__product-card">
-                    <a href="#" class="basket__product-img-wrap">
-                      <img src="img/product-img.jpg" alt="" class="basket__product-img">
-                    </a>
-                    <div class="basket__product-body">
-                      <div class="basket__product-title"><a href="#">Название товара</a></div>
-                      <div class="basket__product-sub-title"><a href="#">Название варианта товара</a></div>
-                      <div class="basket__product-info-group">
-                        <div class="basket__product-info">Ближайшая дата <br> доставки 14.03.2020</div>
-                        <div class="basket__product-info">На данный вид товара требуется <br> предварительный заказ за 2 дня</div>
+                  <div class="basket-card">
+                    <div class="basket-card__img-wrap">
+                      <img src="img/product-img.jpg" alt="" class="basket-card__img">
+                    </div>
+                    <div class="basket-card__body">
+                      <div class="basket-card__head">
+                        <div class="basket-card__title">Название товара</div>
+                        <div class="basket-card__sub-title">Название варианта товара</div>
                       </div>
-                      <a href="#" class="basket__product-add btn btn--outline-green">
-                        <span>Добавить открытку к букету</span>
-                        <span class="basket__product-add-caption">(это бесплатно)</span>
-                      </a>
+                      <div class="basket-card__parts">
+                        <div class="basket-card__part part-info">
+                          <div class="basket-card__info-group">
+                            <div class="basket-card__info">Ближайшая дата <br> доставки 14.03.2020</div>
+                            <div class="basket-card__info">На данный вид товара требуется <br> предварительный заказ за 2 дня</div>
+                          </div>
+                          <a href="#" class="basket-card__dop btn">
+                            <span>Добавить открытку к букету</span>
+                            <span class="dop-caption">(это бесплатно)</span>
+                          </a>                          
+                        </div>
+                        <div class="basket-card__part part-qut">
+                          <div class="field-num">
+                            <span class="field-num__input-wrap">
+                                <span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="1" name="quantity" max="100" min="1" step="1">
+                                </span>
+                            </span>
+                          </div>                          
+                        </div>
+                        <div class="basket-card__part part-price">
+                          <span class="basket-card__price">4000 р.</span>
+                        </div>
+                        <div class="basket-card__part part-remove">
+                          <a href="#" class="basket-card__remove"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#remove-icon"></use></svg></a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="basket__product-quantity">
-                    <span>+ sdfsdf -</span>
+                </div>
+                <div class="basket__product">
+                  <div class="basket-card">
+                    <div class="basket-card__img-wrap">
+                      <img src="img/product-img.jpg" alt="" class="basket-card__img">
+                    </div>
+                    <div class="basket-card__body">
+                      <div class="basket-card__head">
+                        <div class="basket-card__title">Название товара</div>
+                        <div class="basket-card__sub-title">Название варианта товара</div>
+                      </div>
+                      <div class="basket-card__parts">
+                        <div class="basket-card__part part-info">
+                          <div class="basket-card__info-group">
+                            <div class="basket-card__info">Ближайшая дата <br> доставки 14.03.2020</div>
+                            <div class="basket-card__info">На данный вид товара требуется <br> предварительный заказ за 2 дня</div>
+                          </div>
+                          <a href="#" class="basket-card__dop btn">
+                            <span>Добавить открытку к букету</span>
+                            <span class="dop-caption">(это бесплатно)</span>
+                          </a>                          
+                        </div>
+                        <div class="basket-card__part part-qut">
+                          <div class="field-num">
+                            <span class="field-num__input-wrap">
+                                <span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="1" name="quantity" max="100" min="1" step="1">
+                                </span>
+                            </span>
+                          </div>                          
+                        </div>
+                        <div class="basket-card__part part-price">
+                          <span class="basket-card__price">4000 р.</span>
+                        </div>
+                        <div class="basket-card__part part-remove">
+                          <a href="#" class="basket-card__remove"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#remove-icon"></use></svg></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="basket__product-price">
-                    <span class="price-amount">4000 р.</span>
+                </div>
+                <div class="basket__product">
+                  <div class="basket-card">
+                    <div class="basket-card__img-wrap">
+                      <img src="img/product-img.jpg" alt="" class="basket-card__img">
+                    </div>
+                    <div class="basket-card__body">
+                      <div class="basket-card__head">
+                        <div class="basket-card__title">Название товара</div>
+                        <div class="basket-card__sub-title">Название варианта товара</div>
+                      </div>
+                      <div class="basket-card__parts">
+                        <div class="basket-card__part part-info">
+                          <div class="basket-card__info-group">
+                            <div class="basket-card__info">Ближайшая дата <br> доставки 14.03.2020</div>
+                            <div class="basket-card__info">На данный вид товара требуется <br> предварительный заказ за 2 дня</div>
+                          </div>
+                          <a href="#" class="basket-card__dop btn">
+                            <span>Добавить открытку к букету</span>
+                            <span class="dop-caption">(это бесплатно)</span>
+                          </a>                          
+                        </div>
+                        <div class="basket-card__part part-qut">
+                          <div class="field-num">
+                            <span class="field-num__input-wrap">
+                                <span class="field-num__input-and-btns">
+                                    <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                                    <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                                    <input class="field-num__input" type="number" value="1" name="quantity" max="100" min="1" step="1">
+                                </span>
+                            </span>
+                          </div>                          
+                        </div>
+                        <div class="basket-card__part part-price">
+                          <span class="basket-card__price">4000 р.</span>
+                        </div>
+                        <div class="basket-card__part">
+                          <a href="#" class="basket-card__remove"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#remove-icon"></use></svg></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <a href="#" class="basket__product-remove"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#remove-icon"></use></svg></a>
                 </div>
               </div>
             </div>
@@ -110,8 +210,77 @@
           <div class="basket__checkout">
             <div class="container">
               <div class="checkout">
-                <div class="checkout__total-amount">К оплате: <span class="price-amount">2000 р.</span></div>
-                <a href="#" class="checkout__btn btn btn--lg btn--green">Оформить заказ</a>
+                <div class="checkout__options">
+                  <div class="checkout__part discount">
+                    <form action="" class="discount__form">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Купон или промокод" id="" name="">
+                        </span>
+                      </label>
+                      <button class="btn btn--rounded-outline-green-sm">Применить</button>
+                    </form>
+                    <div class="discount__caption">
+                      Скидка действует только на цветы и не суммируется с другими предложениями
+                    </div>
+                  </div>
+                  <div class="checkout__part bonuses">
+                    <div class="bonuses__header">
+                      Возможно у Вас есть бонусы, <br> войдите в <a href="#">личный кабинет</a>
+                    </div>
+                    <div class="bonuses__info"><a href="#">Вам будет начислено 38 баллов <br> 3% стоимости заказа</a></div>
+                  </div>
+                  <div class="checkout__part to-pay">
+                    <div class="to-pay__total">К оплате: <span>2000 р.</span></div>
+                    <div class="to-pay__action">
+                      <button class="btn btn--green btn--lg">Оформить заказ</button> <br>
+                      <a href="#">вернуться у покупкам</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="basket__checkout">
+            <div class="container">
+              <div class="checkout">
+                <div class="checkout__options">
+                  <div class="checkout__part discount">
+                    <form action="" class="discount__form">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Купон или промокод" id="" name="">
+                        </span>
+                      </label>
+                      <button class="btn btn--rounded-outline-green-sm">Применить</button>
+                    </form>
+                    <div class="discount__caption">
+                      Скидка действует только на цветы и не суммируется с другими предложениями
+                    </div>
+                  </div>
+                  <div class="checkout__part bonuses">
+                    <div class="bonuses__header">
+                      Сумма активных бонусов <span>3403 р.</span>
+                    </div>
+                    <form action="" class="bonuses__form">
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Купон или промокод" id="" name="">
+                        </span>
+                      </label>
+                      <button class="btn btn--rounded-outline-green-sm">Списать</button>                      
+                    </form>
+                    <div class="bonuses__info"><a href="#">Вам будет начислено 38 баллов <br> 3% стоимости заказа</a></div>
+                  </div>
+                  <div class="checkout__part to-pay">
+                    <div class="to-pay__sum">Сумма скидки: <span>0 р.</span></div>
+                    <div class="to-pay__total">К оплате: <span>2000 р.</span></div>
+                    <div class="to-pay__action">
+                      <button class="btn btn--green btn--lg">Оформить заказ</button> <br>
+                      <a href="#">вернуться у покупкам</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -9,11 +9,11 @@
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  z-index: 1;
+  z-index: 10;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background-color: #000;
+  background-color: $color-main;
   color: transparent;
   font: 0/0 a;
   // см. img_to_bg/to-up.svg

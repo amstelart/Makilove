@@ -72,43 +72,58 @@
             <div class="product__row">
               <div class="product__col">
                 <div class="product__view">
-                  <img src="img/product-img.jpg" alt="">
+                  <div class="slider-for">
+                    <img src="img/product-img.jpg" alt="">
+                    <img src="img/product-img.jpg" alt="">
+                    <img src="img/product-img.jpg" alt="">
+                    <img src="img/product-img.jpg" alt="">
+                    <img src="img/product-img.jpg" alt="">
+                  </div>
+                  <div class="slider-nav">
+                    <div><img src="img/product-img.jpg" alt=""></div>
+                    <div><img src="img/product-img.jpg" alt=""></div>
+                    <div><img src="img/product-img.jpg" alt=""></div>
+                    <div><img src="img/product-img.jpg" alt=""></div>
+                    <div><img src="img/product-img.jpg" alt=""></div>
+                  </div>
                 </div>
-                <div class="product__description">
-                  <div class="product__description-title">Описание товара:</div>
-                  <p>В жизни так много приятных поводов, когда хочется порадовать родных, друзей, близких. Мы предлагаем купить букет цветов в <a href="#">интернет-магазине</a>, пользуясь бесплатной доставкой по Челябинску. Вашему вниманию – большой выбор флористических композиций из роз, гербер, орхидей, гвоздик, хризантем, которые оформлены в яркую упаковку.</p>
-                </div>
-                <div class="product__tags">
-                  <div class="product__tags-title">Смотрите также:</div>
-                  <ul class="product__tags-list">
-                    <li><a href="#">розы</a></li>
-                    <li><a href="#">белые розы</a></li>
-                    <li><a href="#">монобукеты из роз</a></li>
-                    <li><a href="#">101 роза</a></li>
-                  </ul>
-                </div>
-                <div class="product__social">
-                  <div class="product__social-title">Поделиться в соц. сетях</div>
-                  <ul class="social">
-                    <li class="social__item">
-                      <a href="#" class="social__link social__link--vk"></a>
-                    </li>
-                    <li class="social__item">
-                      <a href="#" class="social__link social__link--telegram"></a>
-                    </li>
-                    <li class="social__item">
-                      <a href="#" class="social__link social__link--fb"></a>
-                    </li>
-                    <li class="social__item">
-                      <a href="#" class="social__link social__link--inst"></a>
-                    </li>
-                    <li class="social__item">
-                      <a href="#" class="social__link social__link--whatsapp"></a>
-                    </li>
-                    <li class="social__item">
-                      <a href="#" class="social__link social__link--viber"></a>
-                    </li>
-                  </ul>
+                <div>
+                  <div class="product__description">
+                    <div class="product__description-title">Описание товара:</div>
+                    <p>В жизни так много приятных поводов, когда хочется порадовать родных, друзей, близких. Мы предлагаем купить букет цветов в <a href="#">интернет-магазине</a>, пользуясь бесплатной доставкой по Челябинску. Вашему вниманию – большой выбор флористических композиций из роз, гербер, орхидей, гвоздик, хризантем, которые оформлены в яркую упаковку.</p>
+                  </div>
+                  <div class="product__tags">
+                    <div class="product__tags-title">Смотрите также:</div>
+                    <ul class="product__tags-list">
+                      <li><a href="#">розы</a></li>
+                      <li><a href="#">белые розы</a></li>
+                      <li><a href="#">монобукеты из роз</a></li>
+                      <li><a href="#">101 роза</a></li>
+                    </ul>
+                  </div>
+                  <div class="product__social">
+                    <div class="product__social-title">Поделиться в соц. сетях</div>
+                    <ul class="social">
+                      <li class="social__item">
+                        <a href="#" class="social__link social__link--vk"></a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link social__link--telegram"></a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link social__link--fb"></a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link social__link--inst"></a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link social__link--whatsapp"></a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link social__link--viber"></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="product__col">
@@ -142,13 +157,7 @@
                   </div>
                   <div class="product__buy-part">
                     <div>Количество цветов:</div>
-                    <div class="field-range">
-                      <div class="field-range__name">Range</div>
-                      <div class="field-range__input-wrap">
-                        <input class="field-range__input" type="range" min="9" max="51" step="10" value="15" id="">
-                        <div class="field-range__help-text"><code>min="1" max="100" step="1" value="70"</code></div>
-                      </div>
-                    </div>
+                    <input type="text" class="js-range-slider" name="my_range" value="" />
                   </div>
                   <div class="product__buy-part">
                     <div class="product__buy-part-title">Состав букета:</div>
@@ -218,7 +227,7 @@
           <div class="container">
             <div class="delivery-adv">
               <div class="delivery-adv__item"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-adv-icon-01"></use></svg>Мы доставили уже более 1000 букетов</div>
-              <div class="delivery-adv__item"><svg width="40" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-adv-icon-02"></use></svg>Оперативная доставка</div>
+              <div class="delivery-adv__item"><svg width="40" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-adv-icon-002"></use></svg>Оперативная доставка</div>
               <div class="delivery-adv__item"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-adv-icon-03"></use></svg>Прием заказов со всего мира</div>
               <div class="delivery-adv__item"><svg width="30" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#delivery-adv-icon-04"></use></svg>100% финансовая гарантия</div>
             </div>
@@ -233,7 +242,11 @@
                 <div class="rev-group__item">
                   <div class="rev-group__card">
                     <div class="rev-group__card-body">
-                      <div class="rev-group__card-rating"></div>
+                      <div class="rev-group__card-rating">
+                        <div class="star-rating">
+                          <span style="width:65%"></span>
+                        </div>
+                      </div>
                       <div class="rev-group__card-text">Спасибо большое ребятам! Оперативно и с положительными эмоциями выполняют свою работу! ))) Буду вас рекомендовать !)))</div>
                     </div>
                     <div class="rev-group__card-footer">
@@ -245,7 +258,11 @@
                 <div class="rev-group__item">
                   <div class="rev-group__card">
                     <div class="rev-group__card-body">
-                      <div class="rev-group__card-rating"></div>
+                      <div class="rev-group__card-rating">
+                        <div class="star-rating">
+                          <span style="width:65%"></span>
+                        </div>
+                      </div>
                       <div class="rev-group__card-text">Спасибо большое ребятам! Оперативно и с положительными эмоциями выполняют свою работу! ))) Буду вас рекомендовать !)))</div>
                     </div>
                     <div class="rev-group__card-footer">
@@ -257,7 +274,11 @@
                 <div class="rev-group__item">
                   <div class="rev-group__card">
                     <div class="rev-group__card-body">
-                      <div class="rev-group__card-rating"></div>
+                      <div class="rev-group__card-rating">
+                        <div class="star-rating">
+                          <span style="width:65%"></span>
+                        </div>
+                      </div>
                       <div class="rev-group__card-text">Спасибо большое ребятам! Оперативно и с положительными эмоциями выполняют свою работу! ))) Буду вас рекомендовать !)))</div>
                     </div>
                     <div class="rev-group__card-footer">

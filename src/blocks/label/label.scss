@@ -18,16 +18,16 @@ $border-radius:               3px !default;
   position: relative;
   margin: 0 0.1em;
   vertical-align: baseline;
-  line-height: 1;
-  padding: 0.25em 0.4em 0.2em;
+  line-height: 15px;
+  padding: 6px 15px;
   background-color: $gray-lightest;
   color: $text-color;
   text-decoration: none;
   text-transform: none;
-  font-weight: 700;
-  font-size: $font-size--small;
+  font-weight: 400;
+  font-size: 10px;
   white-space: nowrap;
-  border-radius: $border-radius;
+  border-radius: 15px;
 
   &:hover,
   &:focus {
@@ -35,6 +35,32 @@ $border-radius:               3px !default;
     text-decoration: none;
   }
 
+  &--fw {
+    width: 100%;
+    text-align: center;
+  }
+
+  &--green {
+    background-color: $green;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: $green;
+      color: #fff;
+    }
+  }
+
+  &--pink {
+    background-color: $color-main;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: $color-main;
+      color: #fff;
+    }
+  }
   // &--main {
   //   background-color: $color-main;
   //   color: #fff;

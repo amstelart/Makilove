@@ -118,6 +118,12 @@ $line-height:                 1.375em !default;
     @include field-help-text;
   }
 
+  &__inline {
+    #{$block-name}__input-wrap {
+      display: inline-block;
+    }
+  }
+
   &--product-size {
     display: flex;
     #{$block-name}__input-wrap {
@@ -134,9 +140,6 @@ $line-height:                 1.375em !default;
         margin-bottom: ($line-height / 2);
       }
     }
-    #{$block-name}__help-text-wrap {
-      font-size: 18px;
-    }
     #{$block-name}__name {
       display: block;
       margin-right: 0;
@@ -144,12 +147,20 @@ $line-height:                 1.375em !default;
     #{$block-name}__name-text {
       display: block;
       margin-right: 0;
-      font-size: 20px;
+      font-size: 16px;
       margin-bottom: 4px;
 
+      @media (min-width: $screen-xl) {
+        font-size: 20px;
+      }
+
       &.small {
-        font-size: 18px;
+        font-size: 14px;
         margin-bottom: 0;
+
+        @media (min-width: $screen-xl) {
+          font-size: 18px;
+        }
       }
     }
   }

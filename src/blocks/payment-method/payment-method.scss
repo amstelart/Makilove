@@ -1,0 +1,60 @@
+// В этом файле должны быть стили для БЭМ-блока payment-method, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.payment-method {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+  margin-bottom: 30px;
+
+  &__item {
+    @include col();
+    @include col(lg, 3);
+  }
+
+  &__card {
+    border: 2px solid #FAF6F5;
+    border-radius: 10px;
+    text-align: center;
+    padding: 17px 24px;
+    height: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    svg {
+      margin-bottom: 14px;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    &.is-active {
+      border-color: $green;
+    }
+  }
+
+  &__caption {
+    background: #FAF6F5;
+    padding: 20px;
+
+    h2 {
+      margin-top: 0;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0;
+    }
+  }
+  
+}

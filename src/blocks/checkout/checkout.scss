@@ -6,16 +6,79 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  &__pay {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0;
+    flex-direction: column;
+    
+    @media (min-width: $screen-md) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
 
   &__total-amount {
-    margin-right: 35px;
+    margin: 15px 35px 15px 0;
     font-size: 22px;
 
     .price-amount {
       font-weight: 500;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    // flex-direction: column;
+    
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__part {
+    padding: 10px 20px;
+
+    &.discount {
+      border-bottom: 1px solid $green;
+      max-width: 100%;
+      flex-basis: 100%;
+      @media (min-width: $screen-sm) {
+        border-bottom: none;
+        border-right: 1px solid $green;
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media (min-width: $screen-lg) {
+        max-width: 33.333%;
+        flex-basis: 33.333%;
+      }
+    }
+    &.bonuses {
+      max-width: 100%;
+      flex-basis: 100%;
+      @media (min-width: $screen-sm) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media (min-width: $screen-lg) {
+        max-width: 33.333%;
+        flex-basis: 33.333%;
+      }
+    }
+    &.to-pay {
+      max-width: auto;
+      flex-basis: auto;
+      margin: auto;
+      @media (min-width: $screen-lg) {
+        max-width: 33.333%;
+        flex-basis: 33.333%;
+        margin: 0;
+      }
     }
   }
 }

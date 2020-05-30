@@ -66,8 +66,13 @@ $z-index-modal:               100 !default;
   }
 
   &__header {
-    padding: 5px 40px 0 10px;
+    padding: 15px 40px 0 40px;
     flex-shrink: 0;
+  }
+
+  &__logo {
+    margin: auto;
+    display: block;
   }
 
   &__title {
@@ -83,18 +88,119 @@ $z-index-modal:               100 !default;
     position: absolute !important; // stylelint-disable-line  declaration-no-important
     top: 5px;
     right: 5px;
+    width: 20px;
+    height: 20px;
+
+    &.close > span:before,
+    &.close > span:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #000;
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+    }
   }
 
   &__body {
-    padding: 0 10px;
+    padding: 0 40px;
     flex-grow: 1;
   }
 
   &__footer {
-    padding: 10px;
+    padding: 0 40px 30px 40px;
     flex-shrink: 0;
   }
 
+  &__call {
+
+  }
+
+  &__city-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+    span {
+      display: inline-block;
+      margin-left: 3px;
+    }
+  }
+  &__city-row {
+    @include row;
+  }
+  &__city-col {
+    @include col();
+    @include col(md, 3);
+    @include col(sm, 6);
+  }
+  &__city-caption {
+    margin-bottom: 30px;
+  }
+  &__city-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+        color: $color-main;
+      }
+    }
+  }
+
+  &__added {
+    text-align: center;
+  }
+
+  &__postal {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+  &__postal-nav {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    
+    @media (min-width: $screen-md) {
+      flex-basis: 215px;
+      flex-shrink: 0;
+      max-width: 215px;
+      margin-right: 15px;
+    }
+  }
+  &__postal-body {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  
+  &__password-form {
+    .field-actions {
+      text-align: center;
+    }
+  }
+
+  &__review-form {
+    .field-actions {
+      text-align: center;
+    }
+  }
+ 
   &__backdrop {
     position: fixed;
     top: 0;
@@ -142,5 +248,64 @@ $z-index-modal:               100 !default;
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+#modal-call {
+  @media (min-width: 992px) {
+    .modal__dialog {
+        width: 480px;
+        height: auto;
+    }
+  }
+  .modal__caption {
+    text-align: center;
+    font-size: 16px;
+  }
+  .field-actions {
+    text-align: center;
+  }
+  .field-checkbox {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+#modal-added {
+  @media (min-width: 992px) {
+    .modal__dialog {
+        width: 420px;
+        height: auto;
+    }
+  }
+}
+
+#modal-postal {
+  .modal__header {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 992px) {
+    .modal__dialog {
+        width: 740px;
+        height: auto;
+    }
+  }
+}
+
+#modal-password {
+  @media (min-width: 992px) {
+    .modal__dialog {
+        width: 420px;
+        height: auto;
+    }
+  }
+
+  .modal__header {
+    margin-bottom: 20px;
+  }
+}
+#modal-review {
+  .modal__header {
+    margin-bottom: 20px;
   }
 }

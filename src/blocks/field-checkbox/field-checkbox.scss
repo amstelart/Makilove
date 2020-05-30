@@ -59,12 +59,12 @@ $line-height:                 1.375em !default;
     &:before {
       content: '';
       position: absolute;
-      top: 0.1em;
+      top: 0;
       left: 0;
-      width: 14px;
-      height: 14px;
-      border: 2px solid currentColor;
-      border-radius: $border-radius;
+      width: 17px;
+      height: 17px;
+      border: 1px solid #464646;
+      border-radius: 1px;
     }
 
     @at-root input:focus ~ &:before {
@@ -74,14 +74,13 @@ $line-height:                 1.375em !default;
     &:after {
       content: '';
       position: absolute;
-      top: calc(0.1em + 1px);
-      left: 3px;
-      width: 14px;
-      height: 6px;
+      top: 4px;
+      left: 4px;
+      width: 9px;
+      height: 9px;
       opacity: 0;
-      border-left: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      transform: rotate(-45deg);
+      background: #FA5775;
+      border-radius: 1px;
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {
@@ -115,5 +114,11 @@ $line-height:                 1.375em !default;
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &__inline {
+    #{$block-name}__input-wrap {
+      display: inline-block;
+    }
   }
 }

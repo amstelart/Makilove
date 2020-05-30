@@ -1,6 +1,10 @@
 // Если на проекте jQuery
 $(document).ready(function () {
 
+    $('[data-toggle="datepicker"]').datepicker({
+      language: 'ru-RU'
+    });
+
     // mobile menu
     $('.main-nav__toggler').click(function(e){
         e.preventDefault();
@@ -56,4 +60,41 @@ $(document).ready(function () {
           ]
       });
     //   ./main-slider
+    var custom_values = [9, 21, 31, 41, 51];
+    $(".js-range-slider").ionRangeSlider({
+      skin: "round",
+      type: "single",
+      step: 2,
+      min: 9,
+      max: 51,
+      grid: true,
+      values: custom_values
+  });
+
+
+  $('.rev-c__carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    draggable: false,
+    fade: false
+  });
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    draggable: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    centerPadding: '0px',
+    infinite: true,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+  });
 });

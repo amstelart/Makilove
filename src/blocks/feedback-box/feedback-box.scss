@@ -11,10 +11,19 @@
   &__img-wrap {
     @include col();
     @include col(md, 4);
+
+    img {
+      display: block;
+      margin: auto;
+    }
   }
   &__form-wrap {
     @include col();
     @include col(md, 8);
+  }
+
+  &__form {
+    margin-bottom: 25px;
   }
 
   &__form-title {

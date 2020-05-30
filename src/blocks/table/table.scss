@@ -6,7 +6,7 @@ $gray-lightest:               hsl(0, 0%, 90%) !default;
 
 $text-color--muted:           hsl(0, 0%, 50%) !default;
 
-$border-color:                hsl(0, 0%, 60%) !default;
+$border-color:                #E1E1E1;
 
 $font-size--small:            0.75em !default;
 
@@ -23,6 +23,7 @@ $field-padding-horizontal:    0.7em !default;
   width: 100%;
   border: 1px solid $border-color;
   margin: $line-height 0;
+  background-color: #FAF6F5;
 
   caption {
     padding-top: 0.4em;
@@ -35,7 +36,7 @@ $field-padding-horizontal:    0.7em !default;
 
   td,
   th {
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding: 8px 10px;
     vertical-align: top;
     border-bottom: 1px solid $border-color;
 
@@ -46,6 +47,8 @@ $field-padding-horizontal:    0.7em !default;
 
   th {
     text-align: left;
+    white-space: nowrap;
+    font-weight: 500;
   }
 
   &__header {}
@@ -53,4 +56,110 @@ $field-padding-horizontal:    0.7em !default;
   &__body {}
 
   &__footer {}
+
+  &__field {
+    margin-bottom: 0;
+  }
+  &__delete-link {
+    text-decoration: none;
+    color: $color-main;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__add-row {
+    text-decoration: underline;
+    color: #000;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__order-act {
+    text-align: center;
+
+    a {
+      color: #000;
+      font-size: 12px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__order-list {
+    margin-bottom: 10px;
+  }
+  &__order-list-head {
+    display: flex;
+    margin-bottom: 4px;
+  }
+
+  &__order-list-title {
+    margin-right: auto;
+    padding-right: 5px;
+  }
+  &__order-list-qut,
+  &__order-list-price {
+    white-space: nowrap;
+    min-width: 50px;
+  }
+
+  &__order-list-caption {
+    font-size: 12px;
+
+    &.box {
+      background-color: #fff;
+      padding: 2px 6px;
+    }
+  }
+
+  &__delivery-item {
+    min-width: 210px;
+    margin-bottom: 5px;
+    span {
+      font-weight: 500;
+      margin-right: 5px;
+      display: inline-block;
+    }
+  }
+
+  &__paym {
+    margin-bottom: 8px;
+    font-size: 12px;
+
+    .label {
+      margin-bottom: 8px;
+    }
+  }
+  &__paym-amount {
+    text-align: center;
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__btn-group {
+    margin-top: 10px;
+    .btn {
+      margin-bottom: 6px;
+      width: 100%;
+    }
+
+    &.btn-group-inline {
+
+      display: flex;
+
+      .btn {
+        width: auto;
+        &:not(:last-child) {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
 }

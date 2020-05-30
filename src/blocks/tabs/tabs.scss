@@ -7,7 +7,7 @@ $gray-lightest:               hsl(0, 0%, 90%) !default;
 $text-color:                  hsl(0, 0%, 10%) !default;
 $text-color--muted:           hsl(0, 0%, 50%) !default;
 
-$border-color:                hsl(0, 0%, 60%) !default;
+$border-color:                $green;
 
 $line-height:                 1.375em !default;
 
@@ -53,18 +53,25 @@ $field-padding-horizontal:    0.7em !default;
     &--active {
 
       #{$block-name}__link {
-        color: $text-color;
-        background-color: #fff;
+        background-color: $green;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          background-color: $green;
+          color: #fff;
+        }
       }
     }
   }
 
   &__link {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-color--muted;
+    padding: 10px 16px;
+    color: $text-color;
     text-decoration: none;
-    background-color: $gray-lightest;
+    background-color: #fff;
+    border-color: $green;
 
     &:hover,
     &:focus {
@@ -74,9 +81,7 @@ $field-padding-horizontal:    0.7em !default;
 
   &__content-wrapper {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
-    border-top: none;
+    padding: 10px 0;
   }
 
   &__content-item {

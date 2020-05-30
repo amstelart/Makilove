@@ -163,6 +163,22 @@ $border-radius:               3px !default;
     }
   }
 
+  &--rounded-outline-green-sm {
+    border: 2px solid $green;
+    border-radius: 10px;
+    color: $green;
+    font-weight: 500;
+    background-color: transparent;
+    padding: 4px 30px;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $green;
+      border-color: $green;
+    }
+  }
+
   &--rounded-outline-green {
     border: 2px solid $green;
     border-radius: 20px;
@@ -201,6 +217,49 @@ $border-radius:               3px !default;
     }
   }
 
+  &--table-green {
+    font-size: 12px;
+    padding: 4px 8px;
+    color: #fff;
+    background-color: $green;
+    border-radius: 2px;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($green, 6%);
+    }
+  }
+  &--table-pink {
+    font-size: 12px;
+    padding: 4px 8px;
+    color: #fff;
+    background-color: $color-main;
+    border-radius: 2px;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($color-main, 6%);
+    }
+  }
+  &--table-blue {
+    font-size: 12px;
+    padding: 4px 8px;
+    color: #fff;
+    background-color: #3163D2;
+    border-radius: 2px;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken(#3163D2, 6%);
+    }
+  }
+
   &--lg {
     font-size: 22px;
     padding: 14px 30px;
@@ -209,5 +268,9 @@ $border-radius:               3px !default;
       font-size: 16px;
       padding: 12px 20px;
     }
+  }
+
+  &--block {
+    width: 100%;
   }
 }

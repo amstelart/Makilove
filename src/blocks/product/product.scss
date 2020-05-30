@@ -14,11 +14,58 @@
 
   &__col {
     @include col();
-    @include col(lg, 6);
+    @include col(md, 6);
   }
 
   &__title {
     margin-top: 0;
+  }
+
+  &__view {
+    margin-bottom: 20px;
+
+    .slider-for {
+      margin-bottom: 20px;
+    }
+
+    .slider-nav {
+      margin: 0 40px;
+      .slick-slide {
+        padding: 0 7px;
+        cursor: pointer;
+      }
+
+      .slick-prev.slick-arrow {
+        &:before {
+          content: "";
+          font: 0/0 a;
+          opacity: 1;
+          text-shadow: none;
+          color: transparent;
+          width: 14px;
+          height: 14px;
+          border-bottom: 1px solid $green;
+          border-left: 1px solid $green;
+          display: block;
+          transform: rotate(45deg)
+        }
+      }
+      .slick-next.slick-arrow {
+        &:before {
+          content: "";
+          opacity: 1;
+          font: 0/0 a;
+          text-shadow: none;
+          color: transparent;
+          width: 14px;
+          height: 14px;
+          border-bottom: 1px solid $green;
+          border-right: 1px solid $green;
+          display: block;
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
 
   &__social {
@@ -118,10 +165,13 @@
 
   &__order-gr {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
  
   &__phone-order {
+    margin: 15px 0;
+
     .phone-order {
       border: 1px solid #C4C4C4;
       text-decoration: none;
@@ -145,10 +195,15 @@
 
   &__order-btngr {
     display: flex;
+    flex-wrap: wrap;
 
     .btn {
-      flex-grow: 1;
       font-size: 20px;
+      min-width: 260px;
+
+      &:first-child {
+        flex-grow: 1;
+      }
     }
   }
   &__delivery {
@@ -161,13 +216,17 @@
     
     > div {
       padding: 6px 50px;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.2;
       min-height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 4px;
+
+      @media (min-width: $screen-xl) {
+        font-size: 20px;
+      }
       
       &.item-border {
         border: 1px solid #67B467;

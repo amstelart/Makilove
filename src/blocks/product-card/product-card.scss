@@ -11,6 +11,72 @@
     flex-direction: column;
   }
 
+  &__tune {
+    display: flex;
+    margin-bottom: 6px;
+
+    .tune-item {
+      text-decoration: none;
+      color: inherit;
+      flex-grow: 1;
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+      span {
+        display: block;
+        white-space: nowrap;
+        line-height: 1.1;
+      }
+
+      &__qut {
+        font-size: 12px;
+      }
+      &__size {
+        font-size: 9px;
+      }
+
+      &__w-size {
+        font-size: 9px;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 14px;
+
+        &:before {
+          content: "";
+          background-image: url("data:image/svg+xml,%3Csvg width='22' height='10' viewBox='0 0 22 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.00638 9.8085L0 4.89862L4.01811 0.0142746L4.84287 1.01834L2.46528 3.91284L19.0015 3.91284L16.6239 1.01834L17.4604 -5.72205e-06L21.4668 4.87728L17.4604 9.8085L16.6239 8.79016L19.0015 5.89566L2.46528 5.89566L4.84287 8.79016L4.00638 9.8085Z' fill='%236D6D6D'/%3E%3C/svg%3E%0A");
+          height: 10px;
+          width: 22px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &__h-size {
+        font-size: 9px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 10px;
+
+        &:before {
+          content: "";
+          width: 10px;
+          height: 22px;
+          background-image: url("data:image/svg+xml,%3Csvg width='10' height='22' viewBox='0 0 10 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 4.00638L4.90988 0L9.79423 4.01811L8.79017 4.84287L5.89567 2.46528V19.0015L8.79017 16.6239L9.80851 17.4604L4.93122 21.4668L0 17.4604L1.01834 16.6239L3.91284 19.0015V2.46528L1.01834 4.84287L0 4.00638Z' fill='%236D6D6D'/%3E%3C/svg%3E");
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      &--wh {
+        display: flex;
+        align-items: flex-start;
+        margin-left: auto;
+      }
+    }
+  }
+
   &__img-wrap {
     display: block;   
     position: relative;
@@ -30,6 +96,9 @@
     top: 0;
     left: 0;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   &__label {
     background-color: #444;
@@ -41,6 +110,8 @@
     background-position: right 8px center;
     white-space: nowrap;
     display: inline-block;
+    transform: translateX( calc(-100% + 30px));
+    transition: transform $transition-time;
 
     &.label-delivery {
       background-color: #5789FA;
@@ -119,4 +190,10 @@
     }
   }
 
+
+  &:hover {
+    #{$block-name}__label {
+      transform: translateX(0);
+    }
+  }
 }

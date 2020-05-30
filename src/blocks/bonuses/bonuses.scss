@@ -1,0 +1,48 @@
+// В этом файле должны быть стили для БЭМ-блока bonuses, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.bonuses {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    text-align: center;
+    margin-bottom: 15px;
+
+    span {
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__form {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+}

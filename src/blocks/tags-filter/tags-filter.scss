@@ -1,0 +1,52 @@
+// В этом файле должны быть стили для БЭМ-блока tags-filter, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tags-filter {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    padding: 4px 12px;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    text-align: center;
+    font-size: 1em;
+    font-family: inherit;
+    line-height: $line-height;
+    text-decoration: none;
+    text-transform: none;
+    border: none;
+    background-color: $gray-lightest;
+    background-image: none;
+    cursor: pointer;
+    transition: $transition-time;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    background-color: #444;
+    margin-right: 12px;
+    margin-bottom: 10px;
+
+    &.active {
+      background-color: #67B467;
+    }
+    &.all {
+      background-color: #F78484;;
+    }
+    &.completed {
+      background-color: #5789FA;
+    }
+    &.orders-for-march {
+      background-color: #FAE557;
+      color: #000;
+    }
+    &.orders-for-february {
+      background-color: #3163D2;
+    }
+  }
+}

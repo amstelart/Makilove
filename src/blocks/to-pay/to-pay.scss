@@ -1,0 +1,50 @@
+// В этом файле должны быть стили для БЭМ-блока to-pay, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.to-pay {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__sum {
+    font-size: 22px;
+  }
+  &__total {
+    font-size: 24px;
+  }
+
+  &__sum,
+  &__total {
+    line-height: 1.2;
+    margin-bottom: 6px;
+    text-align: center;
+    @media (min-width: $screen-lg) {
+      text-align: right;
+    }
+    span {
+      white-space: nowrap;
+      font-weight: 500;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+
+  &__action {
+    text-align: center;
+    @media (min-width: $screen-lg) {
+      float: right;
+    }
+
+    .btn {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

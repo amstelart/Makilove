@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока basket-form, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket-form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .field-radio,
+  .field-text,
+  .field-checkbox {
+    margin-bottom: 12px;
+  }
+  .field-radio__input,
+  .field-text__input,
+  .field-checkbox__input {
+    border-color: #E1E1E1;
+  }
+
+  &__price {
+    background-color: #FCFCFC;
+    border-top: 1px solid $green;
+    border-bottom: 1px solid $green;
+  }
+
+  &__price-item {
+    padding: 6px 20px;
+
+    span {
+      font-weight: 500;
+      display: inline-block;
+      margin-left: 30px;
+    }
+  }
+}

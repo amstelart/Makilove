@@ -1,0 +1,118 @@
+// В этом файле должны быть стили для БЭМ-блока star-rating, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+/// Star Demensions.
+$star-width: 24px;
+$star-height: 24px;
+
+/// Star SVG Backgrounds.
+$star-active: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojRjVDNDE3O308L3N0eWxlPjxnPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04LjgsOC40YzAsMC0zLjgsMC40LTYuMywwLjdDMi4zLDkuMiwyLjEsOS40LDIsOS42QzIsOS44LDIsMTAuMSwyLjIsMTAuM2MxLjksMS44LDQuNyw0LjUsNC43LDQuNWMwLDAtMC44LDMuOS0xLjMsNi41YzAsMC4yLDAsMC41LDAuMiwwLjZDNiwyMiw2LjMsMjIsNi41LDIxLjljMi4yLTEuMyw1LjUtMy4zLDUuNS0zLjNzMy4zLDIsNS41LDMuM2MwLjIsMC4xLDAuNSwwLjEsMC42LDBjMC4yLTAuMSwwLjMtMC40LDAuMi0wLjZjLTAuNS0yLjYtMS4zLTYuNS0xLjMtNi41czIuOC0yLjcsNC43LTQuNUMyMiwxMC4xLDIyLDkuOCwyMiw5LjZzLTAuMy0wLjQtMC41LTAuNGMtMi41LTAuMy02LjMtMC43LTYuMy0wLjdzLTEuNi0zLjYtMi42LTYuMUMxMi40LDIuMiwxMi4yLDIsMTIsMmMtMC4yLDAtMC40LDAuMi0wLjUsMC40QzEwLjQsNC44LDguOCw4LjQsOC44LDguNHoiLz48L2c+PC9nPjwvc3ZnPg==');
+$star-inactive: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojQjJCM0IyO308L3N0eWxlPjxnPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04LjgsOC40YzAsMC0zLjgsMC40LTYuMywwLjdDMi4zLDkuMiwyLjEsOS40LDIsOS42QzIsOS44LDIsMTAuMSwyLjIsMTAuM2MxLjksMS44LDQuNyw0LjUsNC43LDQuNWMwLDAtMC44LDMuOS0xLjMsNi41YzAsMC4yLDAsMC41LDAuMiwwLjZDNiwyMiw2LjMsMjIsNi41LDIxLjljMi4yLTEuMyw1LjUtMy4zLDUuNS0zLjNzMy4zLDIsNS41LDMuM2MwLjIsMC4xLDAuNSwwLjEsMC42LDBjMC4yLTAuMSwwLjMtMC40LDAuMi0wLjZjLTAuNS0yLjYtMS4zLTYuNS0xLjMtNi41czIuOC0yLjcsNC43LTQuNUMyMiwxMC4xLDIyLDkuOCwyMiw5LjZzLTAuMy0wLjQtMC41LTAuNGMtMi41LTAuMy02LjMtMC43LTYuMy0wLjdzLTEuNi0zLjYtMi42LTYuMUMxMi40LDIuMiwxMi4yLDIsMTIsMmMtMC4yLDAtMC40LDAuMi0wLjUsMC40QzEwLjQsNC44LDguOCw4LjQsOC44LDguNHoiLz48L2c+PC9nPjwvc3ZnPg==');
+
+.star-rating {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: $star-width * 5;
+	height: $star-height;
+		
+	> span {
+		position: absolute;
+		display: block;
+		text-indent: -999em;
+		height: $star-height;
+		overflow: hidden;
+		
+		&::before {
+			content: "";
+			background-image: $star-active;
+			background-repeat: repeat-x;
+  		background-size: $star-height;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			display: block;
+			height: $star-height;
+			text-indent: -999em;
+		}
+	}
+	
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+  	right: 0;
+		bottom: 0;
+		width: $star-width * 5;
+		height: $star-height;
+		background-size: $star-height;
+		background-image: $star-inactive;
+		background-repeat: repeat-x;
+		opacity: .25;
+	}
+}
+
+.stars {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	max-width: $star-width * 5;
+	height: $star-height * 2;
+	padding: 0;
+	margin: 0;
+	
+	span {
+		display: block;
+		font-size: 0;
+		height: 100%;
+	}
+	
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+  	right: 0;
+		bottom: 0;
+		width: 100%;
+		height: $star-height;
+		background-size: $star-height;
+		background-image: $star-inactive;
+		background-repeat: repeat-x;
+		opacity: .25;
+		z-index: -1;
+	}
+	
+	a {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 12px;
+		line-height: $star-height;
+		padding-top: $star-height;
+		width: $star-width;
+		text-decoration: none;
+		color: #FFFFFF;
+		font-weight: 700;
+		overflow: hidden;
+		
+		&:hover {
+			color: yellow;
+		}
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background-size: $star-height;
+			background-image: $star-active;
+			background-repeat: repeat-x;
+			z-index: -1;
+		}
+	}
+}
