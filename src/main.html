@@ -58,21 +58,40 @@
 
       <div class="slider-section">
         <div class="container">
-          <div class="main-slider">
-            <div class="main-slider__banners">
-              <div class="gallery-slider-for">
-                <div class="slider-item" style="background-image: url(img/gallery-slider-img-01.jpg);"></div>
-                <div class="slider-item" style="background-image: url(img/gallery-slider-img-01.jpg);"></div>
-                <div class="slider-item" style="background-image: url(img/gallery-slider-img-01.jpg);"></div>
-                <div class="slider-item" style="background-image: url(img/gallery-slider-img-01.jpg);"></div>
+          <div class="slider-section__row">
+            <div class="slider-section__col-slider">
+              <div class="main-slider">
+                <div class="main-slider__item" style="background-image: url(img/gallery-slider-img-01.jpg);">
+                  <div class="main-slider__caption">
+                    <h2>Антикризисные букеты</h2>
+                    <a href="#">смотреть</a>
+                  </div>
+                </div>
+                <div class="main-slider__item" style="background-image: url(img/gallery-slider-img-01.jpg);">
+                  <div class="main-slider__caption">
+                    <h2>Антикризисные букеты</h2>
+                    <a href="#">смотреть</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="main-slider__thumbnails">
-              <div class="gallery-slider-nav">
-                <div class="slider-item" style="background-image: url(img/gallery-slider-nav-01.jpg);"></div>
-                <div class="slider-item" style="background-image: url(img/gallery-slider-nav-02.jpg);"></div>
-                <div class="slider-item" style="background-image: url(img/gallery-slider-nav-03.jpg);"></div>
-                <div class="slider-item" style="background-image: url(img/gallery-slider-nav-02.jpg);"></div>
+            <div class="slider-section__col-banners">
+              <div class="banner-group">
+                <div class="banner">
+                  <a class="banner__link" href="#">
+                    <img class="banner__img" src="img/gallery-slider-nav-01.jpg" alt="">
+                  </a>
+                </div>
+                <div class="banner">
+                  <a class="banner__link" href="#">
+                    <img class="banner__img" src="img/gallery-slider-nav-02.jpg" alt="">
+                  </a>
+                </div>
+                <div class="banner">
+                  <a class="banner__link" href="#">
+                    <img class="banner__img" src="img/gallery-slider-nav-03.jpg" alt="">
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -144,7 +163,54 @@
                   @@include('blocks/product-card/product-card.html')
                 </div>
                 <div class="product-catalog__item">
-                  @@include('blocks/product-card/product-card.html')
+                  <div class="product-card">
+                    <div class="product-card__inner">
+                        <div class="product-card__tune">
+                            <a class="tune-item" href="#">
+                                <span class="tune-item__qut">15 роз</span>
+                                <span class="tune-item__size">15-35см</span>
+                            </a>
+                            <a class="tune-item" href="#">
+                                <span class="tune-item__qut">25 роз</span>
+                                <span class="tune-item__size">20-35см</span>
+                            </a>
+                            <a class="tune-item" href="#">
+                                <span class="tune-item__qut">35 роз</span>
+                                <span class="tune-item__size">25-35см</span>
+                            </a>
+                            <a class="tune-item tune-item--wh" href="#">
+                                <span class="tune-item__w-size">30см</span>
+                                <span class="tune-item__h-size">30см</span>
+                            </a>
+                        </div>
+                        <a href="#" class="product-card__img-wrap">
+                            <div class="product-card__labels">
+                                <div class="product-card__label label-delivery">Доставим к 14.03</div>
+                                <div class="product-card__label label-new">Новинка</div>
+                            </div>
+                            <div class="product-card__options">
+                                <div class="options-btn options-btn--favorites">
+                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M22.2489 2.08284C21.0652 0.739687 19.423 0 17.625 0C15.0962 0 13.4952 1.51031 12.5974 2.77734C12.3645 3.10612 12.1664 3.4358 12 3.74602C11.8336 3.4358 11.6355 3.10612 11.4026 2.77734C10.5048 1.51031 8.90381 0 6.375 0C4.57697 0 2.9348 0.739735 1.75102 2.08289C0.621891 3.36417 0 5.08017 0 6.91477C0 8.91178 0.779672 10.7692 2.45367 12.7601C3.94978 14.5395 6.10214 16.3736 8.59453 18.4974C9.52327 19.2889 10.4837 20.1073 11.5062 21.0019L11.5369 21.0288C11.6694 21.1449 11.8347 21.2029 12 21.2029C12.1653 21.2029 12.3306 21.1448 12.4631 21.0288L12.4938 21.0019C13.5163 20.1073 14.4767 19.2889 15.4056 18.4973C17.8979 16.3736 20.0502 14.5395 21.5463 12.7601C23.2203 10.7692 24 8.91178 24 6.91477C24 5.08017 23.3781 3.36417 22.2489 2.08284ZM14.4934 17.4271C13.6928 18.1093 12.8688 18.8115 12 19.5667C11.1312 18.8115 10.3072 18.1094 9.50644 17.427C4.62867 13.2705 1.40625 10.5245 1.40625 6.91477C1.40625 5.42273 1.90336 4.03692 2.80603 3.01266C3.71906 1.97677 4.98652 1.40625 6.375 1.40625C8.30292 1.40625 9.54919 2.59397 10.2551 3.59034C10.8884 4.48397 11.2188 5.38481 11.3315 5.73061C11.4257 6.02006 11.6956 6.21595 12 6.21595C12.3044 6.21595 12.5743 6.02006 12.6685 5.73061C12.7812 5.38481 13.1116 4.48397 13.7449 3.5903C14.4508 2.59397 15.6971 1.40625 17.625 1.40625C19.0135 1.40625 20.2809 1.97677 21.1939 3.01266C22.0966 4.03692 22.5938 5.42273 22.5938 6.91477C22.5938 10.5245 19.3713 13.2705 14.4934 17.4271Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <img class="product-card__img" src="img/product-img.jpg" alt="">
+                        </a>
+                        <div class="product-card__num">#3458</div>
+                        <div class="product-card__title"><a href="#">Лучи солнца</a></div>
+                        <div class="product-card__price">
+                          <span class="price-amount price-amount--old">5100<span>р.</span></span>
+                          <span class="price-amount price-amount--new">4000<span>р.</span></span>
+                        </div>
+                        <div class="product-card__buy">
+                            <a href="#" class="btn btn--rounded-pink product-card__buy-btn">Купить</a>
+                            <a href="#" class="product-card__buy-link">Быстрая покупка</a>
+                        </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="product-catalog__item">
                   @@include('blocks/product-card/product-card.html')
@@ -536,674 +602,7 @@
 
   </div>
 
-  <div class="page-overlay">
-    <div class="mobile-menu-wrapper">
-      <div class="menu-container menu-container--close">
-        <button id="main-nav-toggler" class="main-nav__toggler burger burger--close"><span></span></button>
-      </div>
-      <div class="menu-container">
-        <div class="top-header__lk">
-          <a class="top-header__lk-link" href="#">Личный кабинет</a>
-          <a href="#" class="page-lang"></a>
-        </div>
-        <div class="top-header__search"><a class="top-header__search-link" href="#">Поиск</a></div>
-        <ul class="social">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--vk"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--telegram"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--fb"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--inst"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--whatsapp"></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--viber"></a>
-          </li>
-        </ul>
-        <div class="user-opt">
-          <a href="#" class="user-opt__btn">
-            <i class="user-opt__icon icon-bonuses">
-              <span class="user-opt__label">400р</span>
-            </i>
-          </a>
-          <a href="#" class="user-opt__btn">
-            <i class="user-opt__icon icon-favorites">
-              <span class="user-opt__label">4</span>
-            </i>
-          </a>
-          <a href="#" class="user-opt__btn">
-            <i class="user-opt__icon icon-basket">
-              <span class="user-opt__label">4</span>
-            </i>
-            <span class="user-opt__caption">Мой заказ</span>
-          </a>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, neque!</p>
-      </div>
-      <div class="menu-container">
-        <ul class="mobile-menu">
-          <li class="mobile-menu__item">
-            <a href="" class="mobile-menu__link">
-              Букеты цветов
-            </a>
-            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-              <ul class="main-nav__list  main-nav__list--lvl-2">
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Композиции
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Поводы
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Букеты
-                  </a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-                    <ul class="main-nav__list  main-nav__list--lvl-3">
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С хризантемами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С эустомами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ирисами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С кустовыми розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С герберами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С орхидеями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ромашкой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лилиями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С экзотическими цветами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лавандой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С тюльпанами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С гвоздикой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Огромные букеты
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С альстромериями
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Розы
-                  </a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-                    <ul class="main-nav__list  main-nav__list--lvl-3">
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С хризантемами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С эустомами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ирисами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С кустовыми розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С герберами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С орхидеями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ромашкой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лилиями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С экзотическими цветами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лавандой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С тюльпанами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С гвоздикой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Огромные букеты
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С альстромериями
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Цветы
-                  </a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-                    <ul class="main-nav__list  main-nav__list--lvl-3">
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С хризантемами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С эустомами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ирисами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С кустовыми розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С герберами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С орхидеями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ромашкой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лилиями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С экзотическими цветами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лавандой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С тюльпанами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С гвоздикой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Огромные букеты
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С альстромериями
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Кому
-                  </a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-                    <ul class="main-nav__list  main-nav__list--lvl-3">
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С хризантемами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С эустомами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ирисами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С кустовыми розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С герберами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С орхидеями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ромашкой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лилиями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С экзотическими цветами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лавандой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С тюльпанами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С гвоздикой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Огромные букеты
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С альстромериями
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Необычные букеты
-                  </a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-                    <ul class="main-nav__list  main-nav__list--lvl-3">
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С хризантемами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С эустомами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ирисами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С кустовыми розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С герберами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С орхидеями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ромашкой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лилиями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С экзотическими цветами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лавандой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С тюльпанами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С гвоздикой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Огромные букеты
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С альстромериями
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Мужские букеты
-                  </a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-                    <ul class="main-nav__list  main-nav__list--lvl-3">
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С хризантемами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С эустомами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ирисами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С кустовыми розами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С герберами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С орхидеями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С ромашкой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лилиями
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С экзотическими цветами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С лавандой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С тюльпанами
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С гвоздикой
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Огромные букеты
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          С альстромериями
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Свадебные букеты
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Стоимость
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Съедобные букеты
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Шляпные коробки
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Сухоцветы
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="mobile-menu__item mobile-menu__item--active">
-            <a href="#" class="mobile-menu__link">
-              Розы
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="#" class="mobile-menu__link">
-              День рождения
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="#" class="mobile-menu__link">
-              Новинки
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="#" class="mobile-menu__link">
-              Свадебные букеты
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="#" class="mobile-menu__link">
-              Недорогие букеты
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="#" class="mobile-menu__link">
-              Отзывы
-            </a>
-          </li>
-          <li class="mobile-menu__item">
-            <a href="" class="mobile-menu__link">
-              Информация
-            </a>
-            <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-2">
-              <ul class="main-nav__list  main-nav__list--lvl-2">
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Контакты
-                  </a>
-                </li>
-                <li class="main-nav__item  main-nav__item--lvl-2">
-                  <a href="" class="main-nav__link  main-nav__link--lvl-2">
-                    Услуги
-                  </a>
-                  <div class="main-nav__sublist-wrapper  main-nav__sublist-wrapper--lvl-3">
-                    <ul class="main-nav__list  main-nav__list--lvl-3">
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Вёрстка HTML-CSS
-                        </a>
-                      </li>
-                      <li class="main-nav__item  main-nav__item--lvl-3">
-                        <a href="" class="main-nav__link  main-nav__link--lvl-3">
-                          Стриптиз
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  @@include('blocks/mobile-menu/mobile-menu.html')
   <div class="page-backdrop"></div>
 
   @@include('_include/page_bottom.html')

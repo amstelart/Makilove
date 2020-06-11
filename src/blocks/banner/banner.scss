@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока banner, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+.banner-group {
+  .banner {
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+}
+
+.banner {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__link {
+    display: block;
+  }
+
+  &__img {
+    display: block;
+  }
+}

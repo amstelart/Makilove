@@ -66,9 +66,16 @@
     border-top: 1px solid $green;
     border-bottom: 1px solid $green;
 
-    & + & {
-      margin: 15px 0;
-    }
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 12;
+
+    // & + & {
+    //   margin: 15px 0;
+    // }
   }
 
   &__details {

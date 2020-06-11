@@ -6,6 +6,34 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__sort {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+  &__sort-title {
+    padding: 3px 8px 3px 0;
+  }
+  &__sort-list {
+    list-style: none;
+    margin: 0;
+    li {
+      display: inline-block;
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        padding: 3px 8px;
+      }
+      &.is-active {
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
   &__list {
     @include row;
     margin-bottom: 30px;
@@ -15,8 +43,7 @@
     @include col();
     @include col(lg, 3);
     @include col(md, 4);
-    @include col(sm, 6);
-    @include col(xs, 12);
+    @include col(xs, 6);
     margin-bottom: 20px;
   }
 

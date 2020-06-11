@@ -169,16 +169,16 @@ img {
 }
 
 .irs--round .irs-handle {
-  border-color: $color-main;
+  border-color: $green;
   cursor: pointer;
 }
 
 .irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
-  background-color: $color-main;
+  background-color: $green;
 }
 .irs--round .irs-from:before, .irs--round .irs-to:before, .irs--round .irs-single:before {
-  border-top-color: $color-main;
+  border-top-color: $green;
 }
 .irs--round .irs-bar {
-  background-color: $color-main;
+  background-color: $green;
 }

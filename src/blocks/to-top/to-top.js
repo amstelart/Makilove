@@ -25,4 +25,22 @@ $( document ).ready(function() {
     }
   }
 
+  $(window).on('scroll', function(){
+    clearTimeout(t0);
+    t0 = setTimeout(function () {
+      showProductFloating();
+      }, 100);
+  });
+
+  showProductFloating();
+
+  function showProductFloating(){
+    if ( $(document).scrollTop() >= 900 ) {
+      $('.product__floating').fadeIn();
+    }
+    else {
+      $('.product__floating').fadeOut();
+    }
+  }
+
 });

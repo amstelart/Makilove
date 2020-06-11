@@ -6,18 +6,66 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  position: relative;
 
-  &__item {
-
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  &__link {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $text-color;
+  ul li {
+    /* Sub Menu */
+  }
+  ul li a {
     display: block;
-    padding: 0.3em 0;
+    background: #ebebeb;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s linear;
+  }
+  ul li a:hover {
+    background: #f8f8f8;
+    color: #515151;
+  }
+  .sub-menu {
+    position: relative;
+  }
+  .sub-menu a .fa {
+    width: 16px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-bottom: 1px solid #31353f;
+      border-right: 1px solid #31353f;
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    &.fa-caret-up {
+      &:before {
+        transform: translateY(-30%) rotate(225deg);
+      }
+    }
+  }
+  ul ul {
+    background-color:#ebebeb;
+  }
+  ul li ul li a {
+    background: #f8f8f8;
+    border-left: 4px solid transparent;
+    padding: 10px 20px;
+  }
+  ul li ul li a:hover {
+    background: #ebebeb;
+    border-left: 4px solid $color-main;
   }
 }

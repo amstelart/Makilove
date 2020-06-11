@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока nav-carousel, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.nav-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 15px;
+
+  &__item {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 6px;
+  }
+
+  .slick-list {
+    margin: 0 60px;
+  }
+
+  .slick-prev {
+    left: 0;
+    &:before {
+      position: absolute;
+      top: 13px;
+      left: 15px;
+    }
+  }
+  .slick-next {
+    right: 0;
+    &:before {
+      position: absolute;
+      top: 13px;
+      left: 10px;
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    border-radius: 50%;
+    border: 1px solid #000;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+  }
+
+  .slick-prev.slick-arrow {
+    &:before {
+      content: "";
+      font: 0/0 a;
+      opacity: 1;
+      text-shadow: none;
+      color: transparent;
+      width: 14px;
+      height: 14px;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      display: block;
+      transform: rotate(45deg)
+    }
+  }
+  .slick-next.slick-arrow {
+    &:before {
+      content: "";
+      opacity: 1;
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+      width: 14px;
+      height: 14px;
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+      display: block;
+      transform: rotate(-45deg);
+    }
+  }
+}

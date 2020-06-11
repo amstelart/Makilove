@@ -102,4 +102,29 @@
       background-color: lighten($color-danger, 35%);
     }
   }
+
+  &--sm {
+    margin-bottom: 0;
+    
+    #{$block-name}__input-and-btns {
+      width: 65px;
+    }
+    #{$block-name}__input {
+      font-size: 16px;
+      padding: 4px 15px;
+      height: 26px;
+    }
+    #{$block-name}__btn {
+      width: 14px;
+      height: 14px;
+      top: 6px;
+
+      &--plus {
+        background-size: 8px 8px;
+      }
+      &--minus {
+        background-size: 8px 8px;
+      }
+    }
+  }
 }

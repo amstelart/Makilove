@@ -11,7 +11,7 @@
   &__item {
     @include col();
     @include col(md, 3);
-    @include col(sm, 6);
+    @include col(xs, 6);
     margin-bottom: 30px;
   }
   &__photo-wrap {
@@ -35,5 +35,11 @@
         width: 100%;
       }
     }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

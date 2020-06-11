@@ -342,3 +342,11 @@ pre {
     @include col(md, 6);
   }
 }
+
+.modal-link {
+  cursor: pointer;
+
+  &:hover {
+    color: $color-main;
+  }
+}

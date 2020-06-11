@@ -6,8 +6,23 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  padding: 15px 0;
+  padding: 15px 0 0 0;
   position: relative;
+  background-color: #fff;
+
+  &--search {
+    z-index: 300;
+    position: relative;
+    .top-search {
+      opacity: 1;
+      height: auto;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      position: absolute;
+    }
+  }
 
   &__nav {
     border-top: 1px solid #E1E1E1;

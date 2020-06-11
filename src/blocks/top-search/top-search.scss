@@ -1,0 +1,48 @@
+// В этом файле должны быть стили для БЭМ-блока top-search, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.top-search {
+
+  $block-name:                &; // #{$block-name}__element
+
+  opacity: 0;
+  height: 0;
+
+  &__inner {
+    display: flex;
+    border-bottom: 1px solid #E1E1E1;
+  }
+
+  &__input {
+    flex-grow: 1;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.375em;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: #fff;
+    appearance: textfield;
+    outline: none;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    svg {
+      fill: #ccc;
+    }
+  }
+  &__close {
+    flex-shrink: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}

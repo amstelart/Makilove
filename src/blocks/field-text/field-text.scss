@@ -111,7 +111,9 @@ $border-radius:               3px !default;
   }
 
   &--phone {
-    &.account__form-row {
+    &.account__form-row,
+    &.user-destination__form-row {
+
       .field-text__input-wrap {
         &:before {
           left: 15px;
@@ -155,6 +157,18 @@ $border-radius:               3px !default;
     .field-text__input {
       padding-left: 32px;
       padding-right: 77px;
+    }
+  }
+}
+
+.account__form-row,
+.user-destination__form-row {
+  .field-text__name,
+  .field-select__name,
+  .field-checkbox__title,
+  .field-radio-btn__title {
+    @media (max-width: $screen-sm) {
+      text-align: left;
     }
   }
 }

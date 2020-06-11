@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока user-bonuses, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-bonuses {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__form {
+    flex-direction: column;
+    display: flex;
+    
+    @media (min-width: $screen-sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__field {
+    margin-top: 0;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}

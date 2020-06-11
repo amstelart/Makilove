@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока slider-section, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider-section {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row;
+  }
+
+  &__col-slider {
+    @include col();
+    @include col(md, 7);
+  }
+  &__col-banners {
+    @include col();
+    @include col(md, 5);
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: inline-flex;
+    }
+  }
+}

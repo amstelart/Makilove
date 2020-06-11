@@ -12,8 +12,13 @@
   }
 
   &__caption {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 1.4;
+
+    @media (min-width: $screen-lg) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__input {

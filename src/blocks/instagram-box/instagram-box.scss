@@ -76,6 +76,8 @@
   &__item {
     @include col();
     @include col(sm, 4);
+    @include col(xs, 6);
+    margin-bottom: 20px;
   }
   &__photo-wrap {
     display: block;

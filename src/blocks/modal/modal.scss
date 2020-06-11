@@ -18,6 +18,7 @@ $z-index-modal:               100 !default;
 
 .js-modal-open {
   overflow: hidden;
+  padding-right: 0 !important;
 }
 
 .modal {
@@ -37,6 +38,7 @@ $z-index-modal:               100 !default;
   .js-modal-open & {
     overflow-x: hidden;
     overflow-y: auto;
+    padding-right: 0 !important;
   }
 
   &__dialog {
@@ -172,7 +174,6 @@ $z-index-modal:               100 !default;
     }
   }
   &__postal-nav {
-    flex-basis: 100%;
     max-width: 100%;
     margin-bottom: 20px;
     

@@ -17,8 +17,18 @@
     @include col(md, 6);
   }
 
+  &__top {
+    margin-bottom: 20px;
+  }
+
   &__title {
-    margin-top: 0;
+    margin: 0;
+  }
+
+  &__num {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
   }
 
   &__view {
@@ -137,8 +147,15 @@
     margin-bottom: 15px;
   }
 
-  &__delivery {
+  &__delivery-item {
+    position: relative;
 
+    .tooltip {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__price {
@@ -267,6 +284,37 @@
       &:focus {
         text-decoration: none;
       }
+    }
+  }
+
+  &__floating {
+    max-width: 535px;
+    min-width: 270px;
+    border: 1px solid $green;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    z-index: 10;
+    display: flex;
+  }
+
+  &__floating-img-wrap {
+    flex-shrink: 0;
+    max-width: 130px;
+    margin-right: 5px;
+  }
+
+  &__floating-body {
+
+    .product__price {
+      margin-bottom: 12px;
+    }
+    .btn {
+      width: 100%;
+      font-size: 20px;
     }
   }
 }
