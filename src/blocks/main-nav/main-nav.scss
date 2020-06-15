@@ -205,12 +205,13 @@ $transition-time:             0.3s !default;
       @media (min-width: $menu-desktop-width) {
         position: absolute;
         z-index: 1;
-        top: 0;
         left: 100%;
         opacity: 0;
         height: 0;
         overflow: hidden;
         transition: opacity $transition-time;
+        top: -1px;
+        min-height: calc(100% + 2px);
 
         // stylelint-disable  max-nesting-depth
         #{$block-name}__item--show-child > &,

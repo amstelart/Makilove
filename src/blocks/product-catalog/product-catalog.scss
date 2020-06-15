@@ -37,6 +37,10 @@
   &__list {
     @include row;
     margin-bottom: 30px;
+    
+    @media (max-width:($screen-md - 1)) {
+      overflow: hidden;
+    }
   }
 
   &__item {
