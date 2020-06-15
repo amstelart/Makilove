@@ -211,14 +211,14 @@ $transition-time:             0.3s !default;
         overflow: hidden;
         transition: opacity $transition-time;
         top: -1px;
-        min-height: calc(100% + 2px);
-
+        
         // stylelint-disable  max-nesting-depth
         #{$block-name}__item--show-child > &,
         #{$block-name}__item--lvl-2:hover & {
           opacity: 1;
           height: auto;
           overflow: visible;
+          min-height: calc(100% + 2px);
         }
         // stylelint-enable
       }
